@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo_List</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: rgb(231, 180, 247);
+    }
+
+    h3 {
+        margin-top: 25px;
+        margin-left: 125px;
+        margin-bottom: 25px;
+        font-size: xx-large;
+    }
+
+    .btn {
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: none;
+        background: rgb(10, 164, 9);
+        background: linear-gradient(90deg, rgba(10, 164, 9, 1) 0%, rgba(213, 255, 59, 1) 100%, rgba(0, 212, 255, 1) 100%);
+        transition: 1s;
+        color: white;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+            5px 5px 5px rgba(255, 255, 255, 0.3),
+            5px 5px 5px rgba(255, 255, 255, 0.3),
+            0 0 0.4px #ededed,
+            0 0 0.8px #545454,
+            0 0 1.2px #d7d7d7,
+            0 0 1.6px #d0d0d0,
+            0 0 2px #171717,
+            0 0 2.4px #3e3e3e,
+            0 0 2.8px #ffffff,
+            0 0 3.2px #bfbfbf,
+            0 0 3.6px #e4e4e4,
+            0 0 4px #636363;
+    }
+
+    .btn:hover {
+        background: rgb(213, 255, 59);
+        background: linear-gradient(90deg, rgba(213, 255, 59, 1) 40%, rgba(13, 122, 12, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    }
+
+    .panel {
+        border-radius: 5px;
+
+        background-color: rgb(189, 189, 189);
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+    .Add {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #Tpu {
+        width: 250px;
+        font-size: large;
+        height: 25px;
+    }
+
+    .List {
+        background-color: rgb(250, 179, 179);
+        margin-top: 50px;
+        width: 100%;
+        height: 250px;
+        overflow-y: auto;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    #CopyLi {
+        padding-left: 20px;
+        display: flex;
+        width: calc(100% - 20px);
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        font-size: 20px;
+    }
+
+    #Del {
+        width: 25px;
+        height: 25px;
+        font-size: large;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+
+    #Del:hover {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+</style>
+
+<body>
+
+    <div class="panel">
+        <h3>Todo_List</h3>
+        <div class="Add">
+            <input type="text" id="Tpu" required>
+            <p><button class="btn" onclick="ekle()">EKLE</button></p>
+        </div>
+        <div class="List">
+            <ul id="Parrent">
+                <li id="CopyLi">Deneme <button id="Del" onclick="dele()">X</button></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
